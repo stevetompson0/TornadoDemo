@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ static_url("style.css") }}">
 </head>
+
+<div class="home-input-group">
+    <img class="home-logo" src="{{ static_url("logo.png") }}" alt="logo">
 <form action="/twitter/" method="get">
     Please input your twitter username:
     <input name="username" type="text"/>
     <input value="submit" type="submit"/>
 </form>
-
+</div>
 <body>
 
 </body>

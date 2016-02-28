@@ -68,6 +68,7 @@ if __name__ == '__main__':
     app = tornado.web.Application(handlers=[
         (r"/", IndexHandler),
         (r"/twitter/", TwitterHandler),
-    ], template_path=os.path.join(os.path.dirname(__file__), "templates"))
+    ], template_path=os.path.join(os.path.dirname(__file__), "templates"),
+        static_path=os.path.join(os.path.dirname(__file__), "static"))
     app.listen(options.port)
     tornado.ioloop.IOLoop.current().start()

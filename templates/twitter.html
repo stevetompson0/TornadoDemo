@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Twitters</title>
+    <link rel="stylesheet" href="{{ static_url("twitter.css") }}">
 </head>
-{% for twitter in twitters %}
-    <div>
-    {{twitter['text']}}
-    {{twitter['created_at']}}
-    </div>
-{% end %}
+
 
 <body>
+
+<table class="table-fill">
+    <thead>
+        <tr>
+            <th class="text-left">Text</th>
+            <th class="text-left">Date</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+         {% for twitter in twitters %}
+            <tr>
+                <td class="text-left">{{twitter['text']}}</td>
+                <td class="text-left">{{twitter['created_at']}}</td>
+            </tr>
+         {% end %}
+    </tbody>
+</table>
+
+
 
 </body>
 </html>
