@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+{% for twitter in twitters %}
+    <div>
+    {{twitter['text']}}
+    {{twitter['created_at']}}
+    </div>
+{% end %}
+
+<body>
+
+</body>
+</html>
